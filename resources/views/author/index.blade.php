@@ -10,7 +10,9 @@
                 <div class="card-header">Author</div>
 
                 <div class="card-body">
+                @if(auth()->user()->user_type == 'Admin')
                 <button class="btn btn-outline-success" data-toggle="modal" data-target="#addModal">Create Author</button>
+                @endif
                 <br>
                 <br>
                 @include('alert')

@@ -10,7 +10,9 @@
                 <div class="card-header">Book</div>
 
                 <div class="card-body">
+                @if(auth()->user()->user_type == 'Admin')
                 <a class="btn btn-outline-success" href="{{ route('book.create') }}">Create Book</a>
+                @endif;
                 <br>
                 <br>
                 @include('alert')
